@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar Energy</title>
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #dff6e3, #c8f0ff, #e8fff0, #d4f4e8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #174d35;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            position: relative;
+             z-index: 2;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #087443;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #087443;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+           .leaf {
+    position: fixed;
+    top: -50px;
+    font-size: 50px;
+    opacity: 0.7;
+    animation: fall linear infinite;
+    pointer-events: none;
+}
+
+.leaf:nth-of-type(1) { left: 10%; animation-duration: 10s; }
+.leaf:nth-of-type(2) { left: 30%; animation-duration: 14s; }
+.leaf:nth-of-type(3) { left: 50%; animation-duration: 12s; }
+.leaf:nth-of-type(4) { left: 70%; animation-duration: 16s; }
+.leaf:nth-of-type(5) { left: 90%; animation-duration: 11s; }
+
+@keyframes fall {
+    from {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}   
+
+.sun-rays {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 0, 0.6) 0%,
+        rgba(255, 215, 0, 0.3) 40%,
+        rgba(255, 215, 0, 0) 70%
+    );
+
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+
+    </style>
+</head>
+
+<body>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="sun-rays"></div>
+<div class="container">
+
+    <h1>Solar Energy</h1>
+
+    <div class="box">
+
+        <img src="images/solar.jpg" alt="Solar Energy">
+
+        <h2>What is Solar Energy?</h2>
+
+        <p>
+            Solar energy is the energy obtained from the Sun.
+            It is a clean and renewable source of energy.
+            Solar panels use sunlight to generate electricity
+            for homes, schools, industries and many other places.
+        </p>
+
+        <h2>How Does Solar Energy Work?</h2>
+
+        <p>
+            Solar panels contain photovoltaic cells. When sunlight
+            falls on these cells, solar energy is converted into
+            electrical energy.
+        </p>
+
+        <h2>Advantages of Solar Energy</h2>
+
+        <ul>
+            <li>It is a renewable source of energy.</li>
+            <li>It produces clean electricity.</li>
+            <li>It reduces pollution.</li>
+            <li>It reduces dependence on fossil fuels.</li>
+            <li>It can be installed on rooftops.</li>
+        </ul>
+
+        <a href="index.html" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wind Energy</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1fff5;
+            color: #174d35;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #087443;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #087443;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+.windmill {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 120px;
+    animation: spin 6s linear infinite;
+    z-index: 100;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Wind particles */
+
+.wind {
+    position: fixed;
+    color: rgba(255,255,255,0.8);
+    font-size: 34px;
+    animation: blow linear infinite;
+    pointer-events: none;
+}
+
+.wind:nth-of-type(1) {
+    top: 20%;
+    animation-duration: 8s;
+}
+
+.wind:nth-of-type(2) {
+    top: 40%;
+    animation-duration: 10s;
+}
+
+.wind:nth-of-type(3) {
+    top: 60%;
+    animation-duration: 7s;
+}
+
+.wind:nth-of-type(4) {
+    top: 80%;
+    animation-duration: 9s;
+}
+
+@keyframes blow {
+    from {
+        left: -50px;
+    }
+    to {
+        left: 110%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+
+<div class="wind">🍃</div>
+<div class="wind">🍃</div>
+<div class="wind">🍃</div>
+<div class="wind">🍃</div>
+<div class="container">
+
+    <h1>Wind Energy</h1>
+
+    <div class="box">
+
+        <img src="images/wind.jpg" alt="wind Energy">
+
+        <h2>What is Wind Energy?</h2>
+
+<p>
+    Wind energy is a renewable source of energy that uses the
+    natural movement of air to generate electricity. Wind turbines
+    convert the kinetic energy of moving wind into electrical energy.
+</p>
+
+<h2>How Does Wind Energy Work?</h2>
+
+<p>
+    Wind turbines have large blades that rotate when wind blows.
+    These rotating blades turn a generator, which converts mechanical
+    energy into electrical energy.
+</p>
+
+<h2>Advantages of Wind Energy</h2>
+
+<ul>
+    <li>It is a clean and renewable source of energy.</li>
+    <li>It does not produce harmful air pollution.</li>
+    <li>It reduces dependence on fossil fuels.</li>
+    <li>It helps reduce greenhouse gas emissions.</li>
+    <li>Wind is naturally available and free.</li>
+</ul>
+
+        <a href="index.html" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

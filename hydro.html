@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wind Energy</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1fff5;
+            color: #174d35;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #087443;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #087443;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .water-drops{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.water-drops span{
+    position:absolute;
+    top:-50px;
+    width:4px;
+    height:20px;
+    background:rgba(100,180,255,0.8);
+    border-radius:50px;
+    animation: rain 3s linear infinite;
+}
+
+/* Different positions */
+.water-drops span:nth-child(1){left:5%; animation-delay:0s;}
+.water-drops span:nth-child(2){left:15%; animation-delay:0.5s;}
+.water-drops span:nth-child(3){left:25%; animation-delay:1s;}
+.water-drops span:nth-child(4){left:35%; animation-delay:1.5s;}
+.water-drops span:nth-child(5){left:45%; animation-delay:2s;}
+.water-drops span:nth-child(6){left:55%; animation-delay:0.7s;}
+.water-drops span:nth-child(7){left:65%; animation-delay:1.2s;}
+.water-drops span:nth-child(8){left:75%; animation-delay:1.8s;}
+.water-drops span:nth-child(9){left:85%; animation-delay:0.3s;}
+.water-drops span:nth-child(10){left:95%; animation-delay:2.3s;}
+
+@keyframes rain{
+    0%{
+        transform:translateY(-50px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+}
+    </style>
+</head>
+
+<body>
+<body>
+
+<div class="water-drops">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="container">
+
+    <h1>Hydropower</h1>
+
+    <div class="box">
+
+        <img src="images/hydro.jpg" alt="Hydropower">
+
+       <h2>What is Hydropower?</h2>
+
+            <p>
+                Hydropower is a renewable source of energy that uses the
+                movement of water to generate electricity. It is one of the
+                oldest and most widely used forms of renewable energy.
+            </p>
+
+            <h2>How Does Hydropower Work?</h2>
+
+            <p>
+                Hydropower plants use flowing or falling water to turn turbines.
+                These turbines are connected to generators, which convert the
+                mechanical energy of moving water into electrical energy.
+            </p>
+
+            <h2>Advantages of Hydropower</h2>
+
+            <ul>
+                <li>It is a renewable and clean source of energy.</li>
+                <li>It produces electricity without burning fossil fuels.</li>
+                <li>It can generate a large amount of electricity.</li>
+                <li>It helps reduce greenhouse gas emissions.</li>
+                <li>Water resources can be used repeatedly.</li>
+            </ul>
+
+            <h2>Disadvantages of Hydropower</h2>
+
+            <ul>
+                <li>It requires suitable rivers or water resources.</li>
+                <li>Building dams can be expensive.</li>
+                <li>It may affect aquatic ecosystems and wildlife.</li>
+            </ul>
+
+     
+
+        <a href="index.html" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

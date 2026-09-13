@@ -1,0 +1,1251 @@
+/* ================================
+   BASIC SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5fff8;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+header {
+    background-color: #075e3d;
+    color: white;
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8cffb7;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+background:
+    linear-gradient(
+        rgba(0, 80, 45, 0.45),
+        rgba(0, 80, 45, 0.45)
+    ),
+    url("images/solar.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+button {
+    margin-top: 30px;
+
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #8cffb7;
+    color: #06472f;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+.explore-btn {
+    display: inline-block;
+    background: #66ff99;
+    color: #064d2b;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #8affb0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   RENEWABLE ENERGY SECTION
+================================ */
+
+#energy {
+    padding: 80px 8%;
+    background-color: #f5fff8;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #075e3d;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================================
+   ENERGY CARDS
+================================ */
+
+.cards {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    display: block;
+    background-color: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.10);
+
+    /* Scroll animation */
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #075e3d;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   POWER SAVING SECTION
+================================ */
+
+#saving {
+    padding: 80px 8%;
+
+    background-color: #eafff0;
+}
+
+.tips {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.tip {
+    background-color: white;
+
+    padding: 25px;
+
+    border-left: 5px solid #0b8f59;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tip h3 {
+    color: #075e3d;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+#about {
+    padding: 80px 8%;
+
+    background-color: #f5fff8;
+}
+
+.about-text {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #444;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #043d29;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+/* ================================
+   MOBILE / TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* ================================
+   MOBILE PHONE
+================================ */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tips {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* ================================
+   ABOUT SECTION - WHITE BOXES
+================================ */
+
+.about-section {
+    padding: 80px 8%;
+    background-color: #f5fff8;
+}
+
+.about-section h2 {
+    text-align: center;
+    color: #075e3d;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background-color: white !important;
+
+    padding: 25px !important;
+
+    border-left: 5px solid #0b8f59;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    display: block;
+}
+
+.about-card h3 {
+    color: #075e3d;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.about-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.college-info {
+    max-width: 1000px;
+    margin: 35px auto 0;
+
+    background-color: white !important;
+
+    padding: 30px !important;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.college-info h3 {
+    color: #075e3d;
+}
+
+.college-info p {
+    color: #555;
+}
+
+
+/* MOBILE ABOUT */
+
+@media (max-width: 600px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 50px 8%;
+    }
+
+    .about-section h2 {
+        font-size: 30px;
+    }
+  }
+    /* ================================
+   POWER SAVING SLIDESHOW
+================================ */
+/* POWER SAVING SLIDESHOW */
+/* =================================
+   POWER SAVING PROFESSIONAL SLIDESHOW
+================================= */
+/* POWER SAVING PROFESSIONAL SLIDESHOW
+================================= */
+
+.saving-slideshow {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+}
+
+/* White slideshow box */
+.saving-slide {
+    display: none;
+    align-items: center;
+    gap: 30px;
+
+    background: white;
+    padding: 25px;
+
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    min-height: 350px;
+    box-sizing: border-box;
+}
+
+/* Image */
+.saving-slide img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Text */
+.saving-slide-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.saving-slide-content h3 {
+    color: #075e3d;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.saving-slide-content p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Navigation buttons */
+
+.saving-prev,
+.saving-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #075e3d;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saving-prev {
+    left: -22px;
+}
+
+.saving-next {
+    right: -22px;
+}
+
+.saving-prev:hover,
+.saving-next:hover {
+    background-color: #064c32;
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* Dots */
+
+.saving-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.saving-dot {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.saving-dot.active {
+    background-color: #075e3d;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .saving-slideshow {
+        width: 90%;
+    }
+
+    .saving-slide {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .saving-slide img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .saving-slide-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .saving-slide-content h3 {
+        font-size: 22px;
+    }
+
+    .saving-slide-content p {
+        font-size: 15px;
+    }
+
+    /* Buttons stay inside the card on mobile */
+    .saving-prev {
+        left: 8px;
+    }
+
+    .saving-next {
+        right: 8px;
+    }
+.saving-prev,
+    .saving-next {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+} /* CLOSE MOBILE MEDIA QUERY */
+
+
+/* Solar icon gentle glow */
+
+.solar-icon {
+    display: inline-block;
+    animation: solarPulse 2s ease-in-out infinite;
+}
+
+@keyframes solarPulse {
+
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px rgba(255, 180, 0, 0.3));
+    }
+
+    50% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 18px rgba(255, 180, 0, 1));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px rgba(255, 180, 0, 0.3));
+    }
+
+}
+/* ================================
+   POWER SAVING HABIT CHECKER
+================================ */
+/* ================================
+   POWER SAVING HABIT CHECKER
+================================ */
+
+#habit-checker {
+    padding: 80px 8%;
+    background-color: #eafff0;
+    text-align: center;
+}
+
+#habit-checker h2 {
+    color: #075e3d;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.habit-intro {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.habit-box {
+    max-width: 750px;
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: left;
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    background-color: #f5fff8;
+
+    border: 2px solid transparent;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.habit-item:hover {
+    transform: translateX(5px);
+    border-color: #8cffb7;
+}
+
+.habit-item input {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+
+    accent-color: #075e3d;
+
+    cursor: pointer;
+}
+
+.habit-item span {
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* Button */
+
+#checkHabits {
+    display: block;
+
+    margin: 25px auto 0;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #075e3d;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#checkHabits:hover {
+    background-color: #064c32;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Result */
+
+#habitResult {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background-color: #eafff0;
+
+    color: #075e3d;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #habit-checker {
+        padding: 55px 6%;
+    }
+
+    #habit-checker h2 {
+        font-size: 28px;
+    }
+
+    .habit-box {
+        padding: 20px;
+    }
+
+    .habit-item {
+        padding: 14px;
+    }
+
+    .habit-item span {
+        font-size: 14px;
+    }
+    .habit-item span {
+    font-size: 14px;
+}
+
+} /* CLOSE HABIT CHECKER MOBILE */
+
+
+
+    
+    
+    /* =====================================
+   GREENPOWER MINI ROBOT
+===================================== */
+
+.gp-robot-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    margin: 20px auto 28px;
+}
+
+
+/* ROBOT BODY CONTAINER */
+
+.gp-robot {
+    width: 90px;
+    height: 115px;
+    position: relative;
+    flex-shrink: 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    animation: gpRobotIdle 2s ease-in-out infinite;
+}
+
+
+/* HEAD */
+
+.gp-robot-head {
+    position: absolute;
+
+    width: 58px;
+    height: 46px;
+
+    left: 16px;
+    top: 8px;
+
+    background: #ffffff;
+
+    border: 4px solid #08734f;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+
+/* EYES */
+
+.gp-robot-eye {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: #08734f;
+
+    border-radius: 50%;
+
+    top: 15px;
+}
+
+.gp-eye-left {
+    left: 13px;
+}
+
+.gp-eye-right {
+    right: 13px;
+}
+
+
+/* MOUTH */
+
+.gp-robot-mouth {
+    position: absolute;
+
+    width: 20px;
+    height: 7px;
+
+    left: 15px;
+    bottom: 8px;
+
+    border-bottom: 3px solid #08734f;
+
+    border-radius: 50%;
+}
+
+
+/* ANTENNA */
+
+.gp-robot-antenna {
+    position: absolute;
+
+    width: 4px;
+    height: 15px;
+
+    left: 43px;
+    top: -7px;
+
+    background: #08734f;
+}
+
+
+/* ANTENNA LIGHT */
+
+.gp-robot-light {
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+
+    left: 39px;
+    top: -19px;
+
+    background: #63d99f;
+
+    border: 3px solid #08734f;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+.gp-robot-body {
+    position: absolute;
+
+    width: 48px;
+    height: 38px;
+
+    left: 21px;
+    top: 58px;
+
+    background: #dffff0;
+
+    border: 4px solid #08734f;
+
+    border-radius: 11px;
+
+    box-sizing: border-box;
+}
+
+
+/* BODY SCREEN */
+
+.gp-robot-screen {
+    position: absolute;
+
+    width: 17px;
+    height: 8px;
+
+    left: 12px;
+    top: 10px;
+
+    background: #63d99f;
+
+    border: 2px solid #08734f;
+
+    border-radius: 3px;
+
+    box-sizing: border-box;
+}
+
+
+/* ARMS */
+
+.gp-robot-arm {
+    position: absolute;
+
+    width: 20px;
+    height: 6px;
+
+    top: 65px;
+
+    background: #08734f;
+
+    border-radius: 5px;
+}
+
+.gp-arm-left {
+    left: 2px;
+
+    transform: rotate(25deg);
+}
+
+.gp-arm-right {
+    right: 2px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* LEGS */
+
+.gp-robot-leg {
+    position: absolute;
+
+    width: 7px;
+    height: 18px;
+
+    top: 92px;
+
+    background: #08734f;
+
+    border-radius: 4px;
+}
+
+.gp-leg-left {
+    left: 34px;
+}
+
+.gp-leg-right {
+    right: 34px;
+}
+
+
+/* MESSAGE */
+
+.gp-robot-message {
+    padding: 10px 16px;
+
+    background: white;
+
+    color: #075c43;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 80, 50, 0.10);
+
+    max-width: 190px;
+}
+
+
+/* =====================================
+   IDLE ANIMATION
+===================================== */
+
+@keyframes gpRobotIdle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* =====================================
+   JUMP
+===================================== */
+
+.gp-robot.gp-jump {
+    animation: gpRobotJump 0.65s ease;
+}
+
+@keyframes gpRobotJump {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-22px) rotate(-5deg);
+    }
+
+    65% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   CELEBRATION
+===================================== */
+
+.gp-robot.gp-celebrate {
+    animation: gpRobotCelebrate 0.5s infinite alternate;
+}
+
+@keyframes gpRobotCelebrate {
+
+    from {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    to {
+        transform: translateY(-15px) rotate(8deg);
+    }
+
+}
+
+
+/* ARMS MOVE UP */
+
+.gp-robot.gp-celebrate .gp-arm-left {
+    animation: gpArmLeft 0.5s infinite alternate;
+}
+
+.gp-robot.gp-celebrate .gp-arm-right {
+    animation: gpArmRight 0.5s infinite alternate;
+}
+
+
+@keyframes gpArmLeft {
+
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(-55deg);
+    }
+
+}
+
+
+@keyframes gpArmRight {
+
+    from {
+        transform: rotate(-25deg);
+    }
+
+    to {
+        transform: rotate(55deg);
+    }
+
+}
+
+
+/* =====================================
+   CONFETTI
+===================================== */
+
+.gp-confetti {
+    position: fixed;
+
+    top: -20px;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    font-size: 18px;
+
+    animation: gpConfettiFall 2.5s linear forwards;
+}
+
+
+@keyframes gpConfettiFall {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gp-robot-area {
+        gap: 12px;
+    }
+
+    .gp-robot-message {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+}

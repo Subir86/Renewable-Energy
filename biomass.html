@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biomass Energy</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1fff5;
+            color: #174d35;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #087443;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #087443;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .air-particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
+
+.air-particles span{
+    position:absolute;
+    bottom:-20px;
+    width:8px;
+    height:8px;
+    background:rgba(0, 0, 0, 0.7);
+    border-radius:50%;
+    animation: floatAir 8s linear infinite;
+}
+
+.air-particles span:nth-child(1){left:10%;}
+.air-particles span:nth-child(2){left:20%; animation-delay:1s;}
+.air-particles span:nth-child(3){left:35%; animation-delay:2s;}
+.air-particles span:nth-child(4){left:50%; animation-delay:3s;}
+.air-particles span:nth-child(5){left:65%; animation-delay:1.5s;}
+.air-particles span:nth-child(6){left:75%; animation-delay:2.5s;}
+.air-particles span:nth-child(7){left:85%; animation-delay:0.5s;}
+.air-particles span:nth-child(8){left:95%; animation-delay:3.5s;}
+
+@keyframes floatAir{
+    0%{
+        transform:translate(0,0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translate(-80px,-800px);
+        opacity:0;
+    }
+}
+    </style>
+</head>
+
+<body>
+<div class="air-particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="container">
+
+    <h1>Biomass Energy</h1>
+
+    <div class="box">
+
+        <img src="images/biomass.jpg" alt="Biomass Energy">
+<h2>What is Biomass Energy?</h2>
+            <p>
+                Biomass energy is renewable energy produced from organic materials
+                such as plants, wood, animal waste, and agricultural waste.
+            </p>
+
+            <h2>Advantages of Biomass Energy</h2>
+            <ul>
+                <li>Uses organic and agricultural waste.</li>
+                <li>Reduces waste pollution.</li>
+                <li>Can produce electricity and heat.</li>
+                <li>Is a renewable source of energy.</li>
+            </ul>
+
+            <h2>Disadvantages</h2>
+            <ul>
+                <li>Burning biomass can produce smoke and carbon emissions.</li>
+                <li>Large-scale biomass production requires land and resources.</li>
+            </ul>
+   
+        
+        <a href="index.html" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
