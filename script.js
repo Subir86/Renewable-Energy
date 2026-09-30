@@ -208,62 +208,82 @@ if (gpRobot && gpRobotMessage) {
 
     });
 
+    /* =====================================
+   COMMUNITY OUTREACH SLIDESHOW
+===================================== */
 
-    // =================================
-    // 6/6 CELEBRATION
-    // =================================
+let outreachSlideIndex = 1;
 
-    function celebrateRobot() {
+showOutreachSlide(outreachSlideIndex);
 
-        gpRobotMessage.textContent =
-            "Amazing! You completed all 6! 🎉";
 
-        gpRobot.classList.remove("gp-jump");
+function changeOutreachSlide(n) {
 
-        gpRobot.classList.add("gp-celebrate");
+    showOutreachSlide(
+        outreachSlideIndex += n
+    );
 
-        createConfetti();
+}
+
+
+function currentOutreachSlide(n) {
+
+    showOutreachSlide(
+        outreachSlideIndex = n
+    );
+
+}
+
+
+function showOutreachSlide(n) {
+
+    const slides =
+        document.getElementsByClassName("outreach-slide");
+
+    const dots =
+        document.getElementsByClassName("outreach-dot");
+
+
+    if (n > slides.length) {
+
+        outreachSlideIndex = 1;
+
+    }
+
+
+    if (n < 1) {
+
+        outreachSlideIndex = slides.length;
 
     }
 
 
-    // =================================
-    // CONFETTI
-    // =================================
+    for (let i = 0; i < slides.length; i++) {
 
-    function createConfetti() {
-
-        const shapes = ["✦", "●", "◆", "★"];
-
-        for (let i = 0; i < 50; i++) {
-
-            const piece =
-                document.createElement("div");
-
-            piece.className =
-                "gp-confetti";
-
-            piece.textContent =
-                shapes[
-                    Math.floor(
-                        Math.random() * shapes.length
-                    )
-                ];
-
-            piece.style.left =
-                Math.random() * 100 + "vw";
-
-            piece.style.animationDuration =
-                (1.5 + Math.random() * 2) + "s";
-
-            document.body.appendChild(piece);
-
-            setTimeout(function () {
-                piece.remove();
-            }, 4000);
-
-        }
+        slides[i].style.display = "none";
 
     }
 
+
+    for (let i = 0; i < dots.length; i++) {
+
+        dots[i].classList.remove("active");
+
+    }
+
+
+    slides[outreachSlideIndex - 1].style.display = "block";
+
+    dots[outreachSlideIndex - 1].classList.add("active");
+
+}
+
+
+/* AUTOMATIC SLIDESHOW */
+
+setInterval(function () {
+
+    changeOutreachSlide(1);
+
+}, 5000);
 }

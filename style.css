@@ -197,7 +197,8 @@ button:hover {
     text-align: center;
 
     border-radius: 15px;
-
+    text-decoration: none;
+    color: inherit;
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.10);
 
@@ -1246,6 +1247,328 @@ footer {
     .gp-robot-message {
         font-size: 12px;
         padding: 9px 12px;
+    }
+
+}
+/* =====================================
+   COMMUNITY OUTREACH PROGRAM
+===================================== */
+
+.outreach-section {
+    padding: 80px 8%;
+    background-color: #f5fff8;
+}
+
+.outreach-intro {
+    max-width: 750px;
+    margin: -25px auto 40px;
+    text-align: center;
+
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* MAIN CONTAINER */
+
+.outreach-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* =====================================
+   OUTREACH SLIDESHOW
+===================================== */
+
+.outreach-slideshow {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* SLIDES */
+
+.outreach-slide {
+    display: none;
+
+    width: 100%;
+}
+
+
+/* IMAGE */
+
+.outreach-slide img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 15px;
+}
+
+
+/* =====================================
+   PREVIOUS / NEXT BUTTONS
+===================================== */
+
+.outreach-prev,
+.outreach-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: rgba(7, 94, 61, 0.9);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+}
+
+
+.outreach-prev {
+    left: 28px;
+}
+
+
+.outreach-next {
+    right: 28px;
+}
+
+
+.outreach-prev:hover,
+.outreach-next:hover {
+    background-color: #064c32;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* =====================================
+   DOTS
+===================================== */
+
+.outreach-dots {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+
+.outreach-dot {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    margin: 0 5px;
+
+    background-color: #bbb;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.outreach-dot.active {
+    background-color: #075e3d;
+
+    transform: scale(1.2);
+}
+
+
+/* =====================================
+   OUTREACH CONTENT
+===================================== */
+
+.outreach-content {
+    max-width: 800px;
+
+    margin: 40px auto 0;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.outreach-content h3 {
+    color: #075e3d;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+
+.outreach-content p {
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================
+   EXPLORE BUTTON
+===================================== */
+
+.outreach-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 28px;
+
+    background-color: #075e3d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+.outreach-btn:hover {
+    background-color: #064c32;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .outreach-section {
+        padding: 55px 6%;
+    }
+
+
+    .outreach-intro {
+        font-size: 15px;
+
+        margin-top: -15px;
+    }
+
+
+    .outreach-slideshow {
+        padding: 10px;
+
+        border-radius: 15px;
+    }
+
+
+    .outreach-slide img {
+        height: 260px;
+
+        border-radius: 10px;
+    }
+
+
+    .outreach-prev,
+    .outreach-next {
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+
+    .outreach-prev {
+        left: 18px;
+    }
+
+
+    .outreach-next {
+        right: 18px;
+    }
+
+
+    .outreach-content {
+        padding: 25px 20px;
+    }
+
+
+    .outreach-content h3 {
+        font-size: 22px;
+    }
+
+
+    .outreach-content p {
+        font-size: 14px;
+    }
+
+
+    .outreach-btn {
+        font-size: 14px;
+
+        padding: 12px 20px;
     }
 
 }
