@@ -90,7 +90,7 @@ habitButton.addEventListener("click", function () {
 
     });
 
-    const total = habits.length;
+    const total = 6;
 
     const result = document.getElementById("habitResult");
 
@@ -143,6 +143,34 @@ habitButton.addEventListener("click", function () {
 const gpHabitBoxes = document.querySelectorAll(".habit");
 const gpRobot = document.querySelector(".gp-robot");
 const gpRobotMessage = document.getElementById("robotMessage");
+
+function celebrateRobot() {
+
+    gpRobot.classList.remove("gp-jump");
+    gpRobot.classList.add("gp-celebrate");
+    gpRobotMessage.textContent = "Excellent! All 6 habits complete!";
+
+    for (let i = 0; i < 24; i++) {
+
+        const particle = document.createElement("span");
+        particle.className = "gp-confetti" +
+            (Math.random() < 0.2 ? " gp-confetti-chip" : "");
+        particle.style.left = Math.random() * 100 + "vw";
+        const delay = 100 + Math.random() * 700;
+        particle.style.animationDelay = delay + "ms";
+        document.body.appendChild(particle);
+
+        setTimeout(function () {
+            particle.remove();
+        }, 2500 + delay);
+
+    }
+
+    setTimeout(function () {
+        gpRobot.classList.remove("gp-celebrate");
+    }, 2500);
+
+}
 
 
 // Make sure robot exists

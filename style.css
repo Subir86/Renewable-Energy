@@ -1211,13 +1211,27 @@ footer {
 
     top: -20px;
 
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #222;
+
     z-index: 99999;
 
     pointer-events: none;
 
-    font-size: 18px;
-
     animation: gpConfettiFall 2.5s linear forwards;
+}
+
+.gp-confetti-chip {
+    width: 3px;
+
+    height: 6px;
+
+    border-radius: 1px;
 }
 
 
@@ -1282,187 +1296,80 @@ footer {
    OUTREACH SLIDESHOW
 ===================================== */
 
+/* Community Outreach - Single Photo */
+
 .outreach-slideshow {
     width: 100%;
-    max-width: 900px;
-
-    margin: auto;
-
-    position: relative;
-
-    background: white;
-
-    padding: 15px;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.12);
-
     overflow: hidden;
-}
-
-
-/* SLIDES */
-
-.outreach-slide {
-    display: none;
-
-    width: 100%;
-}
-
-
-/* IMAGE */
-
-.outreach-slide img {
-    width: 100%;
-    height: 450px;
-
-    object-fit: cover;
-
-    display: block;
-
-    border-radius: 15px;
-}
-
-
-/* =====================================
-   PREVIOUS / NEXT BUTTONS
-===================================== */
-
-.outreach-prev,
-.outreach-next {
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 45px;
-    height: 45px;
-
+    border-radius: 18px;
+    background: #ffffff;
     padding: 0;
-    margin: 0;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background-color: rgba(7, 94, 61, 0.9);
-
-    color: white;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 10;
-
-    transition: 0.3s ease;
 }
 
-
-.outreach-prev {
-    left: 28px;
+.outreach-single-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 18px;
+    object-fit: contain;
 }
 
+/* Mobile */
+@media (max-width: 600px) {
+    .outreach-slideshow {
+        border-radius: 14px;
+    }
 
-.outreach-next {
-    right: 28px;
+    .outreach-single-image {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+    }
 }
-
-
-.outreach-prev:hover,
-.outreach-next:hover {
-    background-color: #064c32;
-
-    transform:
-        translateY(-50%)
-        scale(1.08);
-}
-
-
-/* =====================================
-   DOTS
-===================================== */
-
-.outreach-dots {
-    text-align: center;
-
-    margin-top: 20px;
-}
-
-
-.outreach-dot {
-    display: inline-block;
-
-    width: 11px;
-    height: 11px;
-
-    margin: 0 5px;
-
-    background-color: #bbb;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-
-.outreach-dot.active {
-    background-color: #075e3d;
-
-    transform: scale(1.2);
-}
-
-
 /* =====================================
    OUTREACH CONTENT
 ===================================== */
 
 .outreach-content {
-    max-width: 800px;
-
-    margin: 40px auto 0;
-
-    background-color: white;
-
-    padding: 35px;
-
+    max-width: 850px;
+    margin: 35px auto 0;
+    padding: 30px;
+    background: white;
     border-radius: 18px;
-
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
     text-align: center;
-
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.08);
 }
-
 
 .outreach-content h3 {
-    color: #075e3d;
-
-    font-size: 27px;
-
     margin-bottom: 15px;
+    color: #075e3d;
+    font-size: 26px;
 }
-
 
 .outreach-content p {
     color: #555;
-
     font-size: 16px;
-
     line-height: 1.7;
-
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
+.outreach-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: #075e3d;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.outreach-btn:hover {
+    background-color: #064c32;
+    transform: translateY(-2px);
+}
 
 /* =====================================
    EXPLORE BUTTON
